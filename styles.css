@@ -1,0 +1,73 @@
+body {
+    background-color: aquamarine;
+    margin: 60px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: crimson;
+}
+.container {
+    /*background-color: bisque;*/
+    padding: 10px;
+    display: grid;
+
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    justify-content: center;
+    align-content: center;
+}
+.container > div {
+    /*background-color: azure;*/
+    padding: 10px;
+    font-size: xxx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: crimson;
+
+    text-align: center;
+    align-content: center;
+}
+
+.left { 
+    border-right: 5px solid crimson;
+}
+
+.right {
+    border-left: 5px solid crimson;
+}
+
+.top {
+    border-bottom: 5px solid crimson;
+}
+
+.bottom {
+    border-top: 5px solid crimson;
+}
+
+.win {
+    margin: auto;
+    margin-top: 30px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: crimson;
+}
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+.button {
+    background-color:aquamarine;
+    color: crimson;
+    border: 0;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+}

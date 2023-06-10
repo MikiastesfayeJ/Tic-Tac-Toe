@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="title">TIC TAC TOE</div>
+    <div class="container">
+        <div class="1 top left" onclick='tap(1)'></div>
+        <div class="2 top" onclick='tap(2)'></div>
+        <div class="3 top right" onclick='tap(3)'></div>
+        <div class="4 left" onclick='tap(4)'></div>
+        <div class="5" onclick='tap(5)'></div>
+        <div class="6 right" onclick='tap(6)'></div>
+        <div class="7 bottom left" onclick='tap(7)'></div>
+        <div class="8 bottom" onclick='tap(8)'></div>
+        <div class="9 bottom right" onclick='tap(9)'></div>
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="wipe()">PLAY AGAIN</button>
+    </div>
+    <div class="win"></div>
+</body>
+<script src="script.js"></script>
+</html>
