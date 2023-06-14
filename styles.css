@@ -10,7 +10,7 @@ body {
     font-family: sans-serif;
     color: crimson;
 }
-.container {
+.board {
     /*background-color: bisque;*/
     padding: 10px;
     display: grid;
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-content: center;
 }
-.container > div {
+.board > div {
     /*background-color: azure;*/
     padding: 10px;
     font-size: xxx-large;
