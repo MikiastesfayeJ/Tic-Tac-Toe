@@ -4,9 +4,7 @@ let player = 'x',
     done =  false
 
 function tap(tile) {
-    // hides the play again button
-
-
+    // displays X or O on the board and switches players' turn
     if  (ar[tile-1] == '' && done == false)  {
         if (player == 'x') {
             document.getElementsByClassName(tile)[0].innerHTML = 'X'
@@ -48,20 +46,20 @@ function tap(tile) {
         document.getElementsByClassName("win")[0].innerHTML = 'PLAYER ' + player + ' HAS WON!!!'
         done = true
     }
-
+    // checks for drawing conditions
     function checkDraw() {
         if(ar.indexOf('') == -1 ) {
             document.getElementsByClassName("win")[0].innerHTML = "THE GAME IS TIED!!!"
             done = true
         }
     }
-
-    //  
+    checkDraw()
+    
+    // displays the play again button if the game is finished
     if(done == true) {
         document.getElementsByClassName("button")[0].innerHTML = 'PLAY AGAIN'
         return
     }
-    checkDraw()
 }
 // resets the board
 function wipe() {
@@ -75,5 +73,3 @@ function wipe() {
     player = 'x'
     console.log(ar)
 }
-
-// checks the conditions
