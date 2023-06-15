@@ -1,7 +1,9 @@
 
 let player = 'x',
     ar = ['','','','','','','','',''],
-    done =  false
+    done =  false,
+    playerX = 0,
+    playerO = 0
 
 function tap(tile) {
     // displays X or O on the board and switches players' turn
@@ -17,7 +19,6 @@ function tap(tile) {
             ar[tile-1] = 'o'
         }
     }
-    console.log(ar)
 
     // winning conditions
     for(let i=0; i < 9; i+=3)
@@ -43,6 +44,14 @@ function tap(tile) {
     
     // displays winning player
     function result(player) {
+        if(player == 'X') {
+            playerX++     // increments X's score
+            document.getElementsByClassName("x")[0].innerHTML = playerX     // displays X's score
+        }
+        if(player == 'O') {
+            playerO++     // increments O's score
+            document.getElementsByClassName("y")[0].innerHTML = playerO     // displays O's score
+        }
         document.getElementsByClassName("win")[0].innerHTML = 'PLAYER ' + player + ' HAS WON!!!'
         done = true
     }
@@ -55,6 +64,7 @@ function tap(tile) {
     }
     checkDraw()
     
+    console.log(playerX)
     // displays the play again button if the game is finished
     if(done == true) {
         document.getElementsByClassName("button")[0].innerHTML = 'PLAY AGAIN'
@@ -71,5 +81,4 @@ function wipe() {
     document.getElementsByClassName("win")[0].innerHTML = ''
     document.getElementsByClassName("button")[0].innerHTML = ''
     player = 'x'
-    console.log(ar)
 }
